@@ -1,0 +1,130 @@
+% Michigan Roads data (based on the 2004 AAA map)
+
+% - - - - - - - - - - - - - - - - - - - - - - - - - -
+% NOTES:
+% 1) lines which begin with a % are just comment lines
+% 2) this is an undirected graph (not a directed graph)
+% 3) all city names are single words with no embedded spaces
+% 4) a list of cities in the UP is provided - assume that
+%    a city is in the LP if it's not in the UP list
+% 	BUT theBridge is a special case which is in BOTH
+%	the UP and LP, if asked...
+
+% - - - - - - - - - - - - - - - - - - - - - - - - - -
+% CITIES IN THE U.P. (UPPER PENNINSULA)
+% besides theBridge, which isn't listed here
+
+up([ crystalFalls, copperHarbor, covington, escanaba, houghton, ironMountain, ironwood, manistique, marinette, marquette, rapidRiver, saultSteMarie, seney, stIgnace ]).
+
+% - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+% BORDER TOWNS JUST INSIDE INDIANA AND OHIO
+distance(michiganCity, southBend, 35).
+distance(southBend, angola, 81).
+distance(angola, toledo, 83).
+
+distance(bentonHarbor, michiganCity, 43).
+distance(bentonHarbor, southBend, 40).
+distance(lansing, angola, 91).
+distance(jackson, toledo, 91).
+distance(annArbor, toledo, 56).
+distance(monroe, toledo, 21).
+
+% DETROIT AREA
+distance(detroit, monroe, 37).
+distance(detroit, annArbor, 40).
+distance(detroit, brighton, 42).
+distance(detroit, flint, 65).
+distance(detroit, imlayCity, 53).
+distance(detroit, portHuron, 56).
+distance(annArbor, brighton, 18).
+distance(brighton, flint, 40).
+distance(flint, imlayCity, 33).
+distance(imlayCity, portHuron, 35).
+
+% THUMB AREA
+distance(portAustin, portSanilac, 53).
+distance(portAustin, imlayCity, 73).
+distance(portAustin, bayCity, 64).
+distance(portHuron, portSanilac, 33).
+distance(saginaw, flint, 37).
+distance(saginaw, alma, 38).
+distance(saginaw, bayCity, 16).
+distance(saginaw, portSanilac, 71).
+
+% WESTERN LOWER HALF OF LOWER PENNINSULA
+distance(kalamazoo, grandRapids, 51).
+distance(kalamazoo, bentonHarbor, 53).
+distance(kalamazoo, battleCreek, 24).
+distance(battleCreek, lansing, 53).
+distance(battleCreek, jackson, 44).
+distance(grandRapids, holland, 26).
+distance(grandRapids, muskegon, 41).
+distance(grandRapids, reedCity, 66).
+distance(holland, bentonHarbor, 51).
+distance(holland, muskegon, 35).
+distance(lansing, jackson, 37).
+distance(lansing, grandRapids, 66).
+distance(lansing, alma, 58).
+distance(lansing, flint, 56).
+distance(lansing, brighton, 46).
+distance(annArbor, jackson, 38).
+
+% UP NORTH (LOWER PENNINSULA) - WESTERN SIDE
+distance(muskegon, ludington, 58).
+distance(muskegon, alma, 93).
+distance(ludington, frankfort, 61).
+distance(ludington, traverseCity, 90).
+distance(ludington, reedCity, 52).
+distance(frankfort, traverseCity, 36).
+distance(frankfort, cadillac, 56).
+distance(cadillac, reedCity, 34).
+distance(cadillac, kalkaska, 34).
+distance(traverseCity, kalkaska, 25).
+distance(clare, cadillac, 50).
+distance(clare, reedCity, 39).
+distance(traverseCity, charlevoix, 49).
+distance(charlevoix, gaylord, 42).
+distance(charlevoix, mackinawCity, 53).
+distance(kalkaska, mackinawCity, 95).
+
+% THE BRIDGE AREA
+distance(mackinawCity, theBridge, 4).
+distance(stIgnace, theBridge, 5).
+
+% UP NORTH (LOWER PENNINSULA) - CENTRAL & EAST
+distance(clare, alma, 37).
+distance(clare, bayCity, 50).
+distance(clare, grayling, 61).
+distance(kalkaska, grayling, 25).
+distance(grayling, standish, 67).
+distance(standish, bayCity, 34).
+distance(grayling, gaylord, 27).
+distance(gaylord, mackinawCity, 57).
+distance(standish, alpena, 99).
+distance(gaylord, alpena, 70).
+distance(alpena, mackinawCity, 92).
+
+% UPPER PENNINSULA - EAST
+distance(stIgnace, manistique, 87).
+distance(stIgnace, seney, 83).
+distance(stIgnace, saultSteMarie, 50).
+distance(saultSteMarie, seney, 83).
+distance(seney, manistique, 38).
+distance(seney, marquette, 78).
+distance(manistique, rapidRiver, 41).
+distance(rapidRiver, escanaba, 15).
+distance(rapidRiver, marquette, 51).
+
+% UPPER PENNINSULA - WEST
+distance(escanaba, marinette, 53).
+distance(escanaba, ironMountain, 50).
+distance(ironMountain, crystalFalls, 39).
+distance(crystalFalls, ironwood, 94).
+distance(crystalFalls, covington, 31).
+distance(covington, ironwood, 87).
+distance(covington, marquette, 61).
+distance(covington, houghton, 51).
+distance(ironwood, houghton, 116).
+distance(copperHarbor, houghton, 45).
+distance(marinette, ironMountain, 66).
